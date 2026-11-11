@@ -126,6 +126,8 @@ def make_settings(tmp_path: Path, **overrides) -> Settings:
         xai_api_key="xai-test", xai_fallback_model="", groq_api_key="gsk-test",
         khaya_asr_key="k", khaya_tts_key="k", khaya_translate_key="k",
         hf_token="hf-test", admin_token="admin-secret", internal_api_token="",
+        survey_form_url="https://docs.google.com/forms/d/e/test-survey/formResponse",
+        ratings_form_url="https://docs.google.com/forms/d/e/test-ratings/formResponse",
         gemini_api_key="", openai_api_key="", qwen_api_key="", resend_api_key="",
         llm_order=["grok", "gemini", "openai", "qwen", "grok-fallback", "groq"],
         rate_limit_ai_per_min=1000, rate_limit_feedback_per_min=1000,
