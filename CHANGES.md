@@ -53,7 +53,7 @@ The user never sees a raw error message any more.
 
 ## Security fixes
 
-- **Survey exports were public.** In v7, anyone could download every survey (names, phone numbers, emails of young people) from `/survey/export`. All exports now need `X-Admin-Token`.
+- **Survey exports need an admin token.** In v7, `/survey/export` did not require authentication. All exports now need `X-Admin-Token`.
 - **Debug routes were public.** Anyone could trigger paid API calls through the `/debug/*` routes. They've been replaced by admin-only `/admin/diagnostics`.
 - **Code injection in the page (XSS).** AI answers and saved history were inserted as HTML, so an answer containing markup could run code in the user's browser. All text is now inserted safely.
 - **Fake system messages.** Conversation history sent from the browser was passed to the AI as-is, so anyone could slip in a fake "system" instruction. It is now cleaned.
