@@ -60,6 +60,11 @@ services:
         sync: false
       - key: KHAYA_TRANSLATE_KEY
         sync: false
+      # Google Forms sync for surveys and ratings (formResponse URLs)
+      - key: SURVEY_FORM_URL
+        sync: false
+      - key: RATINGS_FORM_URL
+        sync: false
       # Hugging Face (thumbs-down audio corrections)
       - key: HF_TOKEN
         sync: false

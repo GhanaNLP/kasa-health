@@ -19,6 +19,8 @@ delete the old ones:
 3. Render will ask for the secret values. Fill in:
    `XAI_API_KEY`, `KHAYA_ASR_KEY`, `KHAYA_TTS_KEY`, `KHAYA_TRANSLATE_KEY`, `HF_TOKEN`.
    `GROQ_API_KEY` is optional; leave it blank if you don't want the fallback.
+   Set `SURVEY_FORM_URL` and `RATINGS_FORM_URL` to your Google Forms `formResponse` URLs
+   if you want surveys and ratings copied to Google Forms. Leave them blank to skip.
 4. `INTERNAL_API_TOKEN` and `ADMIN_TOKEN` are generated automatically, and the frontend
    copies the internal token from the backend. Your admin token is under
    **backend → Environment**.

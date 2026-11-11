@@ -121,15 +121,9 @@ class Settings:
     hf_token: str = field(default_factory=lambda: _str("HF_TOKEN"))
     hf_repo: str = field(default_factory=lambda: _str("HF_REPO", "nasare34/kasa-health-feedback"))
 
-    # --- Google Forms ---
-    survey_form_url: str = field(default_factory=lambda: _str(
-        "SURVEY_FORM_URL",
-        "https://docs.google.com/forms/d/e/1FAIpQLSdXvHEUvMM98R_dwNSwXdMxYlEJtmKcYkEimg4oGkZZyGu7wA/formResponse",
-    ))
-    ratings_form_url: str = field(default_factory=lambda: _str(
-        "RATINGS_FORM_URL",
-        "https://docs.google.com/forms/d/e/1FAIpQLSfE_u5-jFamI8F7-O-rX4wWZAJj6zDSQPvUiExhCuWwpJLFzg/formResponse",
-    ))
+    # --- Google Forms (formResponse URLs; leave empty to skip syncing) ---
+    survey_form_url: str = field(default_factory=lambda: _str("SURVEY_FORM_URL"))
+    ratings_form_url: str = field(default_factory=lambda: _str("RATINGS_FORM_URL"))
 
     # --- Alerts: errors and safety reports are emailed here ---
     alert_email_to: str = field(default_factory=lambda: _str("ALERT_EMAIL_TO", "akwasi@khaya.ai"))
